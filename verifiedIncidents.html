@@ -34,7 +34,7 @@
     <!-- end header -->
     <div class="row">
         <div class="container">
-            <h1 class="bold xxl-text no-margin text-blue">Verified incidents </h1>
+            <h1 class="bold xxl-text no-margin text-blue">Verified incidents</h1>
             <br>
             <div class="">
                 <ul class="list-inline no-padding">
@@ -42,95 +42,34 @@
                         <a href="#" class="button blue text-white radius-5">All</a>
                     </li>
                     <li>
-                        <a href="#" class="button blue text-white radius-5">Verified</a>
+                        <a href="./verifiedIncidents.html" class="button blue text-white radius-5">Verified</a>
                     </li>
                     <li>
-                        <a href="#" class="button blue text-white radius-5">Pending</a>
+                        <a href="./pending-incidents.html" class="button blue text-white radius-5">Pending</a>
                     </li>
                 </ul>
                 <br>
             </div>
             <!-- content -->
-            <div class="card shadow-2 radius-2">
-                <table class="bordered">
+            <div id="message" class="message"></div>
+            <div class="card">
+                <table id="verifiedIncidents" class="shadow-2 radius-2 bordered hide">
                     <tr class="left-align">
-                            <th>#</th>
-                            <th>Type</th>
-                            <th>Report</th>
-                            <th>Description</th>
-                            <th>Latitude</th>
-                            <th>Longitude</th>
-                            <th>Status</th>
-                            <th>Created on <span class="fas fa-sort"></span></th>
+                        <th>#</th>
+                        <th>Report</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Created on </th>
                     </tr>
-                    <tr>    
-                        <td>1</td> 
-                        <td>acident</td>
-                        <td>there is an acident here in remera </td>
-                        <td>There is an acident here in remera </td>
-                        <td>76.234567</td>
-                        <td>89.89900</td>
-                        <td>Verified</td>
-                        <td>16-04-2019</td>
-                        
-                    </tr>
-                    <tr>    
-                        <td>2</td> 
-                        <td>acident</td>
-                        <td>there is an acident here in remera </td>
-                        <td>There is an acident here in remera </td>
-                        <td>76.234567</td>
-                        <td>89.89900</td>
-                        <td>Verified</td>
-                        <td>16-04-2019</td>
-                    
-                    </tr>
-                    <tr>
-                        <td>3</td> 
-                        <td>acident</td>
-                        <td>there is an acident here in remera </td>
-                        <td>There is an acident here in remera </td>
-                        <td>76.234567</td>
-                        <td>89.89900</td>
-                        <td>Verified</td>
-                        <td>16-04-2019</td>           
-                    </tr>
-                    <tr>
-                        <td>4</td> 
-                        <td>acident</td>
-                        <td>there is an acident here in remera </td>
-                        <td>There is an acident here in remera </td>
-                        <td>76.234567</td>
-                        <td>89.89900</td>
-                        <td>Verified</td>
-                        <td>16-04-2019</td>
-                    </tr>
-                    <tr>
-                        <td>5</td> 
-                        <td>acident</td>
-                        <td>there is an acident here in remera </td>
-                        <td>There is an acident here in remera </td>
-                        <td>76.234567</td>
-                        <td>89.89900</td>
-                        <td>Verified</td>
-                        <td>16-04-2019</td> 
-                    </tr>
-                    <tr>    
-                        <td>6</td>
-                        <td>acident</td>
-                        <td>there is an acident here in remera </td>
-                        <td>There is an acident here in remera </td>
-                        <td>76.234567</td>
-                        <td>89.89900</td>
-                        <td>Verified</td>
-                        <td>16-04-2019</td>
-                        
-                </tr>
                 </table>
             </div>
             <!-- end content -->
         </div>     
     </div>
     <div class="clear"></div>
+
+        <!-- javascript -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/verified-incidents.js"></script>
 </body>
 </html>
