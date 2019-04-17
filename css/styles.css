@@ -312,6 +312,7 @@ form{margin:0.5%;width:99%;clear: both;}
 .divider{width:100%;height:1px;clear:both}
 
 /* table */
+table{width: 100%!important}
 table, th, td {
     margin:1em 1%;    
     border-collapse: collapse;
