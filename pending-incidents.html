@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/landingpage.css">
+    <title>ReportApp</title>
+</head>
+<body class="white">
+    <!-- header -->
+    <header class="fixheader white shadow-2" data-page="Inbox">
+        <div class="container">
+            <div class="row ">
+                <div class="small-screen-2 medium-screen-1 large-screen-1">
+                    <div class="logo">
+                        <img src="images/logo_reportapp.svg" alt="Logo">
+                    </div>
+                </div>
+                <div class="small-screen-2 medium-screen-3 large-screen-3 right-align">
+                    <ul class="list-inline mainmenu">
+                       <li><a href="#"> <span class="fas fa-stream"></span> <span class="hide-on-small"> Reports</span></a></li>
+                        <li><a href="#"><span class="fas fa-warehouse"></span> <span class="hide-on-small">  Organizations</span></a></li>
+                        <li><a href="#"><span class="fas fa-users"></span> <span class="hide-on-small"> Users</span></a></li>
+                        <li><a href="#"><span class="fas fa-user"></span> <span class="hide-on-small"> Profile</span> <span class="fas fa-angle-down"></span> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <div class="row">
+        <div class="container">
+            <h1 class="bold xxl-text no-margin text-blue">Pending incidents</h1>
+            <br>
+            <div class="">
+                <ul class="list-inline no-padding">
+                    <li>
+                        <a href="#" class="button blue text-white radius-5">All</a>
+                    </li>
+                    <li>
+                        <a href="#" class="button blue text-white radius-5">Verified</a>
+                    </li>
+                    <li>
+                        <a href="./pending-incidents.html" class="button blue text-white radius-5">Pending</a>
+                    </li>
+                </ul>
+                <br>
+            </div>
+            <!-- content -->
+            <div id="message" class="message"></div>
+            <div class="card">
+                <table id="pendingIncidents" class="shadow-2 radius-2 bordered hide">
+                    <tr class="left-align">
+                        <th>#</th>
+                        <th>Report</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Created on </th>
+                    </tr>
+                </table>
+            </div>
+            <!-- end content -->
+        </div>     
+    </div>
+    <div class="clear"></div>
+
+        <!-- javascript -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/pending-incidents.js"></script>
+</body>
+</html>
