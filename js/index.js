@@ -52,4 +52,11 @@ async function sendData(METHOD, URL, data = {}, resType = 'text', token = '') {
   }
 }
 
+// formating date
+function formatDateTime(date){
+   var months = [ "Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec" ]
+   const d = date.split('-');
+   return months[parseInt(d[1])-1]+" "+d[1] +", "+ d[0];
+}
+
 window.document.addEventListener('DOMContentLoaded', () => {});
