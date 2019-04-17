@@ -29,10 +29,12 @@ function signup() {
             localStorage.setItem(`user`, JSON.stringify(result[data[0]]));
           }
           
+          document.querySelector('.message').classList.replace('hidden', 'show');
           document.querySelector('.message').innerHTML = result.error || `Account successfuly created.
           <a href="login.html" style="color: blue">Click here to login!</a>`;
-          document.querySelector('.message').classList += result.error ? ' message-error' : ' message-success';
-          document.querySelector('.message').classList.replace('hidden', 'show');
+          document.querySelector('.message').classList.remove('message-error');
+          document.querySelector('.message').classList.remove('message-success');
+          document.querySelector('.message').classList.add(result.error ? 'message-error' : 'message-success');
         }
       }
 
