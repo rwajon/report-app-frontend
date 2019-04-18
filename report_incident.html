@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- icons -->
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/loginpage.css">
+	<title>ReportApp</title>
+	<style>
+		 #map {
+				height: 500px;
+				width: 100%;
+				border: solid 2px #ccc;
+				text-align: center;
+      }
+	</style>
+</head>
+
+<body class="white">
+	<!-- header -->
+	<header class="fixheader white shadow-2" data-page="Inbox">
+		<div class="container">
+			<div class="row ">
+				<div class="small-screen-2 medium-screen-1 large-screen-1">
+					<div class="logo">
+						<img src="images/logo_reportapp.svg" alt="Logo">
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- end header -->
+	<div class="row">
+		<div class="container">
+
+			<!-- content -->
+			<div class="row">
+				<div class="loginpage center">
+					<div class="card radius-4  shadow-2">
+						<h1 class="xxl-large center-align">Report incident</h1>
+						<div class="divider grey"></div>
+						<div id="reportIncident">
+							<div class="hidden message"></div>
+							<form action="#" method="#">
+								<div class="input-field">
+									<label for="names">Report</label>
+									<textarea rows="2" id="report"></textarea>
+								</div>
+								<div class="clear"></div>
+								<div class="input-field">
+									<button type="submit" class="button blue text-white bold radius-6 m-text l-padding">
+										Report
+									</button>
+								</div>
+								<br>
+							</form>
+						</div>
+					</div>
+					<!-- end content -->
+				</div>
+				<div class="clear"></div>
+				<div id="map">Map is loading...</div>
+			</div>
+			<div class="clear"></div>
+
+			<!-- javascript -->
+			<script type="text/javascript" src="js/index.js"></script>
+			<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzyXzhhqWBsTj305rY30VC1UF_1OHDKgA&callback=getMapLocation"></script>
+			<script type="text/javascript" src="js/map.js"></script>
+			<script type="text/javascript" src="js/report_incident.js"></script>
+</body>
+
+</html>
