@@ -5,8 +5,8 @@ function signup() {
 
       const fullName = document.querySelector('form #fullName').value;
       const userName = 'none';
-      const phone = document.querySelector('form #email').value || '';
-      const email = document.querySelector('form #phone').value;
+      const phone = document.querySelector('form #phone').value || '';
+      const email = document.querySelector('form #email').value;
       const password = document.querySelector('form #password').value;
       const isAdmin = false;
 
@@ -26,7 +26,7 @@ function signup() {
         if (result) {
           if (result.token) {
             localStorage.setItem(`token`, result.token);
-            localStorage.setItem(`user`, JSON.stringify(result[data[0]]));
+            localStorage.setItem(`user`, JSON.stringify(result.data[0]));
           }
           
           document.querySelector('.message').classList.replace('hidden', 'show');
