@@ -1,4 +1,8 @@
-const HOST = 'http://localhost:3000';
+let HOST = 'https://reportapp-ninjas.herokuapp.com';
+
+if (window.location.href.indexOf('http://localhost:3000') >= 0) {
+  HOST = 'http://localhost:3000';
+}
 
 async function getData(URL, resType = 'text', token = '') {
   try {
