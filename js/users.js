@@ -43,6 +43,43 @@ function signup() {
   }
 }
 
+function login() {
+  if (document.querySelector('#login')) {
+    document.querySelector('#login form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const email = document.querySelector('form #email').value;
+      const password = document.querySelector('form #password').value;
+
+      if (email && password) {
+        const data = {
+          email,
+          password,
+        };
+
+        const URL = `${HOST}/api/v1/auth/login`;
+        const result = await sendData('POST', URL, data, 'json');
+
+        if (result) {
+          if (result.token) {
+            localStorage.setItem(`token`, result.token);
+            localStorage.setItem(`user`, JSON.stringify(result.data[0]));
+          }
+          
+          document.querySelector('.message').classList.replace('hidden', 'show');
+          document.querySelector('.message').innerHTML = result.error || `Welcome ${result.data[0].fullName}`;
+          document.querySelector('.message').classList.remove('message-error');
+          document.querySelector('.message').classList.remove('message-success');
+          document.querySelector('.message').classList.add(result.error ? 'message-error' : 'message-success');
+        }
+      }
+
+      return true;
+    });
+  }
+}
+
 window.document.addEventListener('DOMContentLoaded', () => {
   signup();
+  login();
 });
