@@ -1,129 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/styles.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
     <!-- icons -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/landingpage.css" />
-    <link rel="stylesheet" href="css/organisation.css" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/landingpage.css">
     <title>ReportApp</title>
-  </head>
-  <body class="white">
+</head>
+<body class="white">
     <!-- header -->
     <header class="fixheader white shadow-2" data-page="Inbox">
-      <div class="container">
-        <div class="row ">
-          <div class="small-screen-2 medium-screen-1 large-screen-1">
-            <div class="logo">
-              <img src="images/logo_reportapp.svg" alt="Logo" />
+        <div class="container">
+            <div class="row ">
+                <div class="small-screen-2 medium-screen-1 large-screen-1">
+                    <div class="logo">
+                        <img src="images/logo_reportapp.svg" alt="Logo">
+                    </div>
+                </div>
+                <div class="small-screen-2 medium-screen-3 large-screen-3 right-align">
+                    <ul id="mainmenu" class="list-inline mainmenu"></ul>
+                </div>
             </div>
-          </div>
-          <div
-            class="small-screen-2 medium-screen-3 large-screen-3 right-align"
-          >
-            <ul class="list-inline mainmenu">
-              <li>
-                <a href="#">
-                  <span class="fas fa-stream"></span>
-                  <span class="hide-on-small"> Reports</span></a
-                >
-              </li>
-              <li>
-                <a href="./allOrganisatins.html"
-                  ><span class="fas fa-warehouse"></span>
-                  <span class="hide-on-small"> Organizations</span></a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><span class="fas fa-users"></span>
-                  <span class="hide-on-small"> Users</span></a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><span class="fas fa-user"></span>
-                  <span class="hide-on-small"> Profile</span>
-                  <span class="fas fa-angle-down"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
     </header>
     <!-- end header -->
     <div class="row">
-      <div class="container">
-        <h1 class="bold xxl-text no-margin text-blue">All Organisations</h1>
-        <!-- content -->
-        <div class="card shadow-2 radius-2">
-          <table class="bordered">
-            <tr class="left-align">
-              <th>Id</th>
-              <th>Organisationa name</th>
-              <th>Created on</th>
-              <th>Modified on</th>
-              <th>Edit</th>
-              <th>Delete</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Police</td>
-              <td>15/04/2019</td>
-              <td>15/04/2019</td>
-              <td>
-                <a href="./editOrganisation.html">
-                  <span class=" fa fa-edit"></span>
-                </a>
-              </td>
-              <td>
-                <a href="#">
-                  <span class=" fa fa-trash"></span>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>MTN</td>
-              <td>15/04/2019</td>
-              <td>15/04/2019</td>
-              <td>
-                <a href="./editOrganisation.html">
-                  <span class=" fa fa-edit"></span>
-                </a>
-              </td>
-              <td>
-                <a href="#">
-                  <span class=" fa fa-trash"></span>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a href="#">
-                  <span class=" fa fa-plus"></span>
-                </a>
-              </td>
-              <td>
-                <a href="./newOrganisation.html">
-                  Create a new organisation
-                </a>
-              </td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
-        </div>
-        <!-- end content -->
-      </div>
+        <div class="container">
+            <h1 class="bold xxl-text no-margin text-blue">List of Organizations</h1>
+            <br>
+            
+            <!-- content -->
+            <div id="message" class="message"></div>
+            <div class="card">
+                <table id="allOrganizations" class="shadow-2 radius-2 bordered hide">
+                    <tr class="left-align">
+                        <th>#</th>
+                        <th>Report</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Created on </th>
+                    </tr>
+                </table>
+            </div>
+            <!-- end content -->
+        </div>     
     </div>
-
     <div class="clear"></div>
-  </body>
+
+        <!-- javascript -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/all-incidents.js"></script>
+</body>
 </html>

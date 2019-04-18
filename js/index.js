@@ -1,9 +1,9 @@
 let HOST = 'https://reportapp-ninjas.herokuapp.com';
 
-if (window.location.href.indexOf('http://localhost:3000') >= 0) {
-  HOST = 'http://localhost:3000';
+if (window.location.href.indexOf('http://127.0.0.1:3000') >= 0) {
+  HOST = 'http://127.0.0.1:3000';
 }
-
+console.log(HOST);
 async function getData(URL, resType = 'text', token = '') {
   try {
     const request = new Request(URL, {
@@ -63,4 +63,14 @@ function formatDateTime(date){
    return months[parseInt(d[1])-1]+" "+d[1] +", "+ d[0];
 }
 
+
+// nav
+const mainmenu = document.getElementById("mainmenu");
+if(mainmenu){
+  mainmenu.innerHTML = `
+  <li><a href="./verifiedIncidents.html"> <span class="fas fa-stream"></span> <span class="hide-on-small"> Reports</span></a></li>
+  <li><a href="./allOrganisations.html"><span class="fas fa-warehouse"></span> <span class="hide-on-small">  Organizations</span></a></li>
+  <li><a href="./profile.html"><span class="fas fa-user"></span> <span class="hide-on-small"> Profile</span> <span class="fas fa-angle-down"></span> </a></li>
+`
+}
 window.document.addEventListener('DOMContentLoaded', () => {});

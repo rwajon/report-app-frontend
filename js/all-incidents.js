@@ -1,20 +1,20 @@
-async function getPendindIncidents() {
+async function getAllIncidents() {
     document.querySelector('.message').innerHTML = "Wait, loading...";
     // document.querySelector('.message').classList += result.error ? ' message-error' : ' message-success';
     document.querySelector('.message').classList.replace('show', 'hidden');
-    const URL = `${HOST}/api/v1/reports/pending`;
+    const URL = `${HOST}/api/v1/reports`;
     const result = await getData(URL, token = '');
     if (result) {
         console.log(result);
         const response = JSON.parse(result);
         if(!response.error){
             document.getElementById("message").style.display = 'none';
-            const pendingIncidents = document.getElementById("pendingIncidents");
-            pendingIncidents.classList.remove('hide');
+            const allIncidents = document.getElementById("allIncidents");
+            allIncidents.classList.remove('hide');
             // populate data
             
             response.data.forEach(key => {
-                pendingIncidents.insertAdjacentHTML('beforeend', `
+                allIncidents.insertAdjacentHTML('beforeend', `
                 <tr>    
                     <td>${key.id}</td>
                     <td>${key.report}</td>
@@ -36,5 +36,5 @@ async function getPendindIncidents() {
   }
   
   window.document.addEventListener('DOMContentLoaded', () => {
-    getPendindIncidents();
+    getAllIncidents();
   });

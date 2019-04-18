@@ -17,7 +17,7 @@ async function getPendindIncidents() {
                     <td>${key.id}</td>
                     <td>${key.report}</td>
                     <td>${key.description || "-"}</td>
-                    <td>${key.type || "-"}</td>
+                    <td>${key.status || "-"}</td>
                     <td>${formatDateTime(key.createdAt)}</td>   
                 </tr>
                 `);
