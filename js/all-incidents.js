@@ -40,7 +40,7 @@
 			}
 	}
 	
-	async deleteReport(id) {
+	async function deleteReport(id) {
 		const URL = `${HOST}/api/v1/reports/${id}`;
 		const result = await sendData('DELETE', URL, {}, 'json');
 
