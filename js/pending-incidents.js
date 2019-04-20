@@ -22,9 +22,9 @@ async function getPendindIncidents() {
                     <td>${key.status || "-"}</td>
                     <td>${formatDateTime(key.createdAt)}</td>   
                     <td>
-							<button type="button" id="${key.id}" onclick="deleteReport(this.attributes.id.value)">
-									<i class="fas fa-trash"></i>
-							</button>
+                    <button type="button" id="${key.id}" onclick="deleteReport(this.attributes.id.value)">
+                            <i class="fas fa-trash"></i>
+                    </button>
 					</td>
                 </tr>
                 `);
