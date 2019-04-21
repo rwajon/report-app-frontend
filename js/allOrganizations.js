@@ -19,9 +19,7 @@ async function getAllOrganizations() {
 					`
                 <tr>    
                     <td>${key.id}</td>
-                    <td>${key.report}</td>
-                    <td>${key.description || '-'}</td>
-                    <td>${key.status || '-'}</td>
+                    <td>${key.name}</td>
                     <td>${formatDateTime(key.createdAt)}</td>
                     <td>
                             <button type="button" id="${key.id}" onclick="deleteOrganization(this.attributes.id.value)">
