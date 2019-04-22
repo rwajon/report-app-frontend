@@ -8,7 +8,6 @@
     <!-- icons -->
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/landingpage.css" />
-    <link rel="stylesheet" href="css/organisation.css" />
     <title>ReportApp</title>
   </head>
   <body class="white">
@@ -24,8 +23,7 @@
           <div
             class="small-screen-2 medium-screen-3 large-screen-3 right-align"
           >
-          <ul id="mainmenu" class="list-inline mainmenu"></ul>
-
+            <ul id="mainmenu" class="list-inline mainmenu"></ul>
           </div>
         </div>
       </div>
@@ -36,28 +34,39 @@
         <div class="box">
           <h1 class="bold xxl-text no-margin text-blue">Create Organization</h1>
           <!-- content -->
-          <div class="card shadow-2 radius-2">
-            <form action="#" method="#">
-              <div class="input-field medium-h-padding">
-                <label for="org-name">Organisation name</label>
-                <input type="text" id="email" placeholder="organisation name" />
-              </div>
-              <div class="clear"></div>
-              <div class="input-field">
-                <button
-                  type="submit"
-                  class="button blue text-white bold radius-6 m-text l-padding"
-                >
-                  Create
-                </button>
-              </div>
-            </form>
+          <div id="newOrg">
+            <div class="card shadow-2 radius-2">
+              <div id=" hidden message" class="hidden message"></div>
+              <form action="#" method="#">
+                <div class="input-field medium-h-padding">
+                  <label for="orgName">Organisation name</label>
+                  <input
+                    type="text"
+                    id="orgName"
+                    placeholder="organisation name"
+                  />
+                </div>
+                <div class="clear"></div>
+                <div class="input-field">
+                  <button
+                    type="submit"
+                    class="button blue text-white bold radius-6 m-text l-padding"
+                  >
+                    Create
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
+
           <!-- end content -->
         </div>
       </div>
     </div>
 
     <div class="clear"></div>
+    <!-- javascript -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/newOrganisation.js"></script>
   </body>
 </html>
