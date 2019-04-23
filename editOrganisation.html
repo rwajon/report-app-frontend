@@ -8,7 +8,6 @@
     <!-- icons -->
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/landingpage.css" />
-    <link rel="stylesheet" href="css/organisation.css" />
     <title>ReportApp</title>
   </head>
   <body class="white">
@@ -24,8 +23,7 @@
           <div
             class="small-screen-2 medium-screen-3 large-screen-3 right-align"
           >
-          <ul id="mainmenu" class="list-inline mainmenu"></ul>
-
+            <ul id="mainmenu" class="list-inline mainmenu"></ul>
           </div>
         </div>
       </div>
@@ -39,25 +37,28 @@
           </h1>
           <!-- content -->
           <div class="card shadow-2 radius-2">
-            <form action="#" method="#">
-              <div class="input-field medium-h-padding">
-                <label for="org-name">Set a new organisation name</label>
-                <input
-                  type="text"
-                  id="organisationName"
-                  placeholder="new organisation's name"
-                />
-              </div>
-              <div class="clear"></div>
-              <div class="input-field">
-                <button
-                  type="submit"
-                  class="button blue text-white bold radius-6 m-text l-padding"
-                >
-                  Edit
-                </button>
-              </div>
-            </form>
+            <div id="editOrg">
+              <div class="hidden message"></div>
+              <form action="#" method="#">
+                <div class="input-field medium-h-padding">
+                  <label for="org-name">Set a new organisation name</label>
+                  <input
+                    type="text"
+                    id="organisationName"
+                    placeholder="new organisation's name"
+                  />
+                </div>
+                <div class="clear"></div>
+                <div class="input-field">
+                  <button
+                    type="submit"
+                    class="button blue text-white bold radius-6 m-text l-padding"
+                  >
+                    Edit
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
           <!-- end content -->
         </div>
@@ -65,5 +66,8 @@
     </div>
 
     <div class="clear"></div>
+    <!-- javascript -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/editOrganization.js"></script>
   </body>
 </html>

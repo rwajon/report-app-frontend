@@ -1,28 +1,31 @@
-function newOrg() {
-  if (document.querySelector("#newOrg")) {
+function editOrganization() {
+  const url = window.location.href;
+  const id = url.substring(url.lastIndexOf("=") + 1);
+  console.log(id);
+  if (document.querySelector("#editOrg")) {
     document
-      .querySelector("#newOrg form")
+      .querySelector("#editOrg form")
       .addEventListener("submit", async e => {
         e.preventDefault();
-        const id = window.location.href;
-        console.log(id);
-        const organizationName = document.querySelector("form #orgName").value;
+        const organizationName = document.querySelector(
+          "form #organisationName"
+        ).value;
+        console.log(organizationName);
 
         if (organizationName) {
           const data = {
             organizationName
           };
-          console.log(organizationName);
 
-          const URL = `${HOST}/api/v1/organisations/new`;
-          const result = await sendData("POST", URL, data, "json");
+          const URL = `${HOST}/api/v1/organisations/${id}`;
+          const result = await sendData("PUT", URL, data, "json");
           console.log(result);
           if (result) {
             document
               .querySelector(".message")
               .classList.replace("hidden", "show");
             document.querySelector(".message").innerHTML =
-              result.error || ` Organization successfuly created.`;
+              result.error || ` The Organisation name edited successfully.`;
             document
               .querySelector(".message")
               .classList.remove("message-error");
@@ -43,5 +46,5 @@ function newOrg() {
 }
 
 window.document.addEventListener("DOMContentLoaded", () => {
-  newOrg();
+  editOrganization();
 });
